@@ -11,7 +11,7 @@ export class AlbumManager implements IManager<Album> {
     edit(id: number, name: string): void {
         let index = this.findIndexById(id);
         if (index === -1) {
-            console.log('Không có Album này')
+            console.log('Can not find this Album !!!')
         } else if (this.listAlbum[index].name === name) {
             console.log('The name of the Album is already used, please choose another name!!!!')
 
@@ -37,7 +37,7 @@ export class AlbumManager implements IManager<Album> {
     remove(id: number): void {
         let index = this.findIndexById(id);
         if (index === -1) {
-            console.log('Không có')
+            console.log('Can not find this Album')
         } else {
             this.listAlbum.splice(index, 1);
         }
